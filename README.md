@@ -1,50 +1,33 @@
-# 🌟 Vidhi Solanki | Professional Portfolio
+# 📊 EXECUTIVE SUMMARY: Vidhi Solanki Portfolio
 
-A modern, premium, and fully responsive personal portfolio website built to showcase my experience as a **Data Analyst and Software Developer**. 
+> **Mission:** Transforming complex datasets and raw code into actionable, elegant web experiences.
 
-Designed with a sleek "glassmorphism" aesthetic, dark mode by default, and smooth scroll animations to create an instantly impressive experience for recruiters and visitors.
+Welcome to the source repository of my personal portfolio. This project serves as a live, interactive dashboard of my professional journey, bridging the gap between Data Analytics, Business Intelligence, and Software Development.
 
-![Portfolio Preview](preview.png) <!-- Replace with an actual screenshot of your site -->
+![Portfolio Preview](preview.png)
 
-## 🚀 Features
+## 📈 Key Portfolio Indicators (KPIs)
 
-- **Modern UI/UX:** Dark luxury tech theme, glassmorphism, and subtle gradients.
-- **Fully Responsive:** Beautifully optimized for desktop, tablet, and mobile viewing.
-- **Interactive Animations:** Custom typing text effect, smooth scrolling, scroll-reveal elements, and button ripple effects.
-- **Integrated Resume Viewer:** Built-in PDF viewer and direct download functionality.
-- **Lightweight & Fast:** Built entirely from scratch using pure Vanilla Web Technologies. Zero frameworks, zero libraries, maximum performance.
+| Metric | Value | Description |
+| :--- | :--- | :--- |
+| **Performance** | Maximum | Zero external libraries or frameworks used. 100% pure vanilla tech. |
+| **Architecture** | Glassmorphism | Modern, luxury UI with deep dark-mode aesthetics and fluid gradients. |
+| **Interactivity** | High | Custom scroll reveals, typing effects, and DOM observers. |
+| **Accessibility** | Built-in | Fully responsive across mobile, tablet, and desktop viewports. |
 
-## 🛠️ Tech Stack
+## 🛠️ System Architecture (Tech Stack)
 
-- **HTML5** (Semantic structuring)
-- **CSS3** (Flexbox, CSS Grid, Custom Variables, Keyframe Animations)
-- **Vanilla JavaScript** (DOM manipulation, Intersection Observer API)
+**`[ FRONTEND CORE ]`**
+- `HTML5` - Semantic structural foundation and embedded document viewing.
+- `CSS3` - Advanced styling, grid layouts, CSS variables, and keyframe animations.
+- `Vanilla JS` - State management, event listeners, and Intersection Observers.
 
-## 📂 Project Structure
+## 📂 Directory Tree
 
 ```text
-.
-├── index.html    # Main HTML structure and content
-├── style.css     # Styling, responsiveness, and animations
-├── script.js     # Interactive elements and scroll observers
-├── resume.pdf    # Viewable and downloadable resume
-└── README.md     # Project documentation
-```
-
-## 💻 How to Run Locally
-
-1. Clone this repository to your local machine:
-   ```bash
-   git clone <https://github.com/YOUR_GITHUB_USERNAME/YOUR_REPOSITORY_NAME.git>
-   ```
-2. Navigate into the project folder.
-3. Open `index.html` in any modern web browser. *(No local server, dependencies, or build tools required!)*
-
-## 📬 Let's Connect
-
-- **Email:** vidhisolanki189@gmail.com
-- **LinkedIn:** linkedin.com/in/vidhisolanki189
-- **Location:** Ahmedabad, Gujarat, India
-
----
-*Designed and built by Vidhibahen Hemantbhai Solanki.*
+ROOT/
+├── index.html       # The View Layer
+├── style.css        # The Presentation Layer
+├── script.js        # The Logic Layer
+├── resume.pdf       # Downloadable Asset
+└── README.md        # System Documentation
