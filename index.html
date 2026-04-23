@@ -1,177 +1,42 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vidhi Solanki - Portfolio</title>
-    <style>
-        :root {
-            --primary-color: #0366d6;
-            --text-color: #24292e;
-            --bg-color: #f6f8fa;
-            --card-bg: #ffffff;
-        }
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-            line-height: 1.6;
-            color: var(--text-color);
-            background-color: var(--bg-color);
-        }
-        
-        html {
-            scroll-behavior: smooth;
-        }
-        
-        header {
-            background: var(--card-bg);
-            padding: 1rem 5%;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 100;
-        }
-        
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-        }
-        
-        .nav-links {
-            list-style: none;
-            display: flex;
-            gap: 2rem;
-        }
-        
-        .nav-links a {
-            text-decoration: none;
-            color: var(--text-color);
-            font-weight: 500;
-            transition: color 0.3s ease;
-        }
-        
-        .nav-links a:hover {
-            color: var(--primary-color);
-        }
-        
-        section {
-            padding: 6rem 5% 4rem;
-            text-align: center;
-        }
-        
-        .hero {
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        
-        .highlight {
-            color: var(--primary-color);
-        }
-        
-        .btn {
-            display: inline-block;
-            padding: 0.8rem 1.5rem;
-            background: var(--primary-color);
-            color: #fff;
-            text-decoration: none;
-            border-radius: 6px;
-            margin-top: 1rem;
-            transition: background 0.3s ease;
-        }
-        
-        .btn:hover {
-            background: #005cc5;
-        }
-        
-        .project-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-        
-        .project-card {
-            background: var(--card-bg);
-            padding: 2rem;
-            border-radius: 6px;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-            border: 1px solid #e1e4e8;
-        }
-        
-        footer {
-            text-align: center;
-            padding: 2rem;
-            background: var(--card-bg);
-            border-top: 1px solid #e1e4e8;
-        }
-        
-        .content-container {
-            max-width: 800px;
-            margin: 0 auto;
-            text-align: left;
-            padding-top: 1rem;
-        }
-        
-        .content-container h3 {
-            margin-top: 1.5rem;
-            margin-bottom: 0.5rem;
-            color: var(--text-color);
-        }
-        
-        .feature-list {
-            margin-left: 1.5rem;
-            margin-top: 0.5rem;
-        }
-        
-        .btn-outline {
-            display: inline-block;
-            padding: 0.8rem 1.5rem;
-            background: transparent;
-            color: var(--primary-color);
-            text-decoration: none;
-            border: 2px solid var(--primary-color);
-            border-radius: 6px;
-            margin-top: 1rem;
-            margin-left: 0.5rem;
-            transition: all 0.3s ease;
-        }
-        
-        .btn-outline:hover {
-            background: var(--primary-color);
-            color: #fff;
-        }
-    </style>
-</head>
-<body>
-    <footer>
-        <p>&copy; 2024 Vidhi Solanki. Hosted on GitHub Pages.</p>
-    </footer>
+<header>
+    <nav>
+        <div class="logo">Vidhi Solanki</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#about">About</a></li>
+        </ul>
+    </nav>
+</header>
 
-    <script>
-        // Add subtle drop shadow to header when scrolling
-        window.addEventListener('scroll', () => {
-            const header = document.querySelector('header');
-            
-            if (window.scrollY > 10) {
-                header.style.boxShadow = '0 4px 10px rgba(0,0,0,0.1)';
-            } else {
-                header.style.boxShadow = '0 1px 3px rgba(0,0,0,0.1)';
-            }
-        });
-    </script>
-</body>
-</html>
+<section id="home" class="hero">
+    <div>
+        <h1>Hi, I'm <span class="highlight">Vidhi Solanki</span></h1>
+        <p>A passionate developer building clean and functional web experiences.</p>
+        <a href="#projects" class="btn">View Projects</a>
+    </div>
+</section>
+
+<section id="projects">
+    <h2>Projects</h2>
+    <div class="project-grid">
+        <div class="project-card">
+            <h3>Project One</h3>
+            <p>Short description of your project.</p>
+        </div>
+        <div class="project-card">
+            <h3>Project Two</h3>
+            <p>Short description of your project.</p>
+        </div>
+    </div>
+</section>
+
+<section id="about">
+    <h2>About Me</h2>
+    <div class="content-container">
+        <p>
+            I'm a developer with experience in building modern web applications.
+            I enjoy solving problems and creating intuitive user experiences.
+        </p>
+    </div>
+</section>
