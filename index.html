@@ -1,42 +1,466 @@
-<header>
-    <nav>
-        <div class="logo">Vidhi Solanki</div>
-        <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#about">About</a></li>
-        </ul>
-    </nav>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vidhi Solanki | Data Analyst Portfolio</title>
+    <meta name="description" content="Vidhi Solanki - Data Analyst skilled in Python, SQL, dashboards, automation, and business insights.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-hover: #1d4ed8;
+            --dark: #1e293b;
+            --light: #f8fafc;
+            --gray: #64748b;
+            --white: #ffffff;
+            --section-bg: #f1f5f9;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background-color: var(--light);
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        h1, h2, h3 {
+            line-height: 1.2;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        /* Header & Nav */
+        .header {
+            background: var(--white);
+            padding: 1.2rem 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+        
+        .nav nav {
+            display: flex;
+            gap: 1.5rem;
+            font-weight: 500;
+        }
+        
+        .nav nav a {
+            transition: color 0.3s ease;
+        }
+        
+        .nav nav a:hover {
+            color: var(--primary);
+        }
+        
+        /* Sections */
+        .section {
+            padding: 6rem 0;
+        }
+
+        .section h2 {
+            font-size: 2rem;
+            margin-bottom: 2.5rem;
+            text-align: center;
+        }
+
+        .section.dark {
+            background: var(--section-bg);
+        }
+        
+        /* Hero Section */
+        .hero {
+            padding: 10rem 0 6rem;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+        
+        .tag {
+            background: #dbeafe;
+            color: var(--primary);
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 1.5rem;
+        }
+        
+        .hero h1 {
+            font-size: 2.6rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .desc {
+            color: var(--gray);
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+        }
+
+        /* Buttons */
+        .buttons {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2.5rem;
+            flex-wrap: wrap;
+        }
+
+        .btn { 
+            display: inline-block;
+            padding: 0.75rem 1.5rem; 
+            border-radius: 8px; 
+            font-weight: 500; 
+            transition: all 0.3s ease; 
+        }
+
+        .btn i { margin-right: 0.5rem; }
+
+        .btn.primary { 
+            background: var(--primary); 
+            color: var(--white); 
+            box-shadow: 0 4px 6px rgba(37, 99, 235, 0.2);
+        }
+        .btn.primary:hover { 
+            background: var(--primary-hover); 
+            transform: translateY(-2px);
+        }
+        .btn.secondary { 
+            background: var(--dark); 
+            color: var(--white); 
+        }
+        .btn.secondary:hover { 
+            background: #0f172a; 
+            transform: translateY(-2px);
+        }
+        .btn.ghost { 
+            border: 2px solid #cbd5e1; 
+            color: var(--dark); 
+        }
+        .btn.ghost:hover { 
+            border-color: var(--primary); 
+            color: var(--primary); 
+        }
+
+        /* Social Icons */
+        .social { 
+            display: flex; 
+            gap: 1.5rem; 
+            font-size: 1.5rem; 
+        }
+        .social a { 
+            color: var(--gray); 
+            transition: color 0.3s ease; 
+        }
+        .social a:hover { 
+            color: var(--primary); 
+        }
+        
+        /* Cards & Grids */
+        .grid-3 { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+            gap: 2rem; 
+        }
+        
+        .hero-card, .card { 
+            background: var(--white); 
+            padding: 2.5rem; 
+            border-radius: 12px; 
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05); 
+            border: 1px solid #e2e8f0;
+        }
+        
+        .hero-card h3 { 
+            margin-bottom: 1.5rem; 
+            border-bottom: 2px solid var(--section-bg); 
+            padding-bottom: 1rem; 
+            font-size: 1.3rem;
+        }
+        
+        .hero-card ul { list-style: none; }
+        
+        .hero-card li { 
+            margin-bottom: 0.8rem; 
+            padding-left: 2rem; 
+            position: relative; 
+            font-weight: 500;
+        }
+        
+        .hero-card li::before { 
+            content: '\f00c';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            color: var(--primary); 
+            position: absolute; 
+            left: 0; 
+        }
+
+        .card h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+        .card p { color: var(--gray); }
+
+        .card.full {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .card.full h3 { color: var(--dark); margin-bottom: 0.5rem; }
+        .card.full p { margin-bottom: 1rem; font-weight: 500; }
+        .card.full ul {
+            list-style: disc;
+            padding-left: 1.5rem;
+            color: var(--gray);
+        }
+        .card.full li { margin-bottom: 0.5rem; }
+
+        /* Center Align Utilities */
+        .center { 
+            text-align: center; 
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .center p {
+            margin-bottom: 2rem;
+            color: var(--gray);
+            font-size: 1.1rem;
+        }
+
+        .footer { 
+            text-align: center; 
+            padding: 2rem 0; 
+            background: var(--dark); 
+            color: var(--light); 
+        }
+
+        /* Responsive Tweaks */
+        @media (max-width: 900px) {
+            .hero-grid { grid-template-columns: 1fr; gap: 3rem; }
+            .nav { flex-direction: column; gap: 1rem; }
+            .hero { padding-top: 8rem; }
+            .hero h1 { font-size: 2.2rem; }
+        }
+    </style>
+</head>
+<body>
+
+<header class="header">
+    <div class="container nav">
+        <h2 class="logo">Vidhi Solanki</h2>
+
+        <nav>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#experience">Experience</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </div>
 </header>
 
-<section id="home" class="hero">
-    <div>
-        <h1>Hi, I'm <span class="highlight">Vidhi Solanki</span></h1>
-        <p>A passionate developer building clean and functional web experiences.</p>
-        <a href="#projects" class="btn">View Projects</a>
+<section class="hero">
+    <div class="container hero-grid">
+
+        <div class="hero-text">
+            <p class="tag">Open to Data Analyst Opportunities</p>
+
+            <h1>Turning Raw Data Into Insights, Dashboards & Better Decisions.</h1>
+
+            <p class="desc">
+                Data Analyst with strong foundation in Python, SQL, Excel, dashboards,
+                and automation. Backed by real software development experience,
+                allowing me to solve business problems end-to-end.
+            </p>
+
+            <div class="buttons">
+                <a href="Vidhi_Resume_April2026.pdf" class="btn primary" download>
+                    <i class="fa fa-download"></i> Resume
+                </a>
+
+                <a href="#projects" class="btn secondary">
+                    <i class="fa fa-chart-line"></i> Projects
+                </a>
+
+                <a href="#contact" class="btn ghost">
+                    <i class="fa fa-paper-plane"></i> Contact
+                </a>
+            </div>
+
+            <div class="social">
+                <a href="https://linkedin.com/in/vidhisolanki189" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="mailto:vidhisolanki189@gmail.com"><i class="fa fa-envelope"></i></a>
+            </div>
+        </div>
+
+        <div class="hero-card">
+            <h3>Professional Snapshot</h3>
+
+            <ul>
+                <li>2 Years Industry Experience</li>
+                <li>IBM Data Analyst Certified</li>
+                <li>Python + SQL + Dashboards</li>
+                <li>Former Software Developer</li>
+                <li>Strong Analytical Thinking</li>
+            </ul>
+        </div>
+
     </div>
 </section>
 
-<section id="projects">
-    <h2>Projects</h2>
-    <div class="project-grid">
-        <div class="project-card">
-            <h3>Project One</h3>
-            <p>Short description of your project.</p>
-        </div>
-        <div class="project-card">
-            <h3>Project Two</h3>
-            <p>Short description of your project.</p>
-        </div>
-    </div>
-</section>
+<section id="about" class="section">
+    <div class="container">
+        <h2>About Me</h2>
 
-<section id="about">
-    <h2>About Me</h2>
-    <div class="content-container">
-        <p>
-            I'm a developer with experience in building modern web applications.
-            I enjoy solving problems and creating intuitive user experiences.
+        <p class="center">
+            I specialize in analyzing datasets, building dashboards, automating reports,
+            and helping businesses make smarter decisions using data.
+            My background in software development gives me an advantage in problem solving,
+            database logic, debugging, and workflow optimization.
         </p>
     </div>
 </section>
+
+<section id="skills" class="section dark">
+    <div class="container">
+        <h2>Skills</h2>
+
+        <div class="grid-3">
+
+            <div class="card">
+                <h3>Analytics</h3>
+                <p>Python, Pandas, NumPy, SQL, Excel, EDA</p>
+            </div>
+
+            <div class="card">
+                <h3>Visualization</h3>
+                <p>Plotly, Dash, Cognos, Matplotlib, Seaborn</p>
+            </div>
+
+            <div class="card">
+                <h3>Development</h3>
+                <p>PHP, JavaScript, jQuery, Yii2, Git, GitHub</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section id="projects" class="section">
+    <div class="container">
+        <h2>Featured Projects</h2>
+
+        <div class="grid-3">
+
+            <div class="card">
+                <h3>IBM Data Analyst Capstone</h3>
+                <p>
+                    Cleaned datasets, performed exploratory analysis,
+                    and built KPI dashboards for business insights.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Short Squeeze Dashboard</h3>
+                <p>
+                    Automated API data collection and built visual dashboards
+                    for real-time market trend tracking.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Hotel Booking Analytics</h3>
+                <p>
+                    Tracked bookings, customer behavior,
+                    and backend metrics using MySQL reporting systems.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section id="experience" class="section dark">
+    <div class="container">
+        <h2>Experience</h2>
+
+        <div class="card full">
+            <h3>Junior Software Developer</h3>
+            <p><strong>NuWave Communications Inc</strong> | Feb 2023 - Feb 2025</p>
+
+            <ul>
+                <li>Developed and optimized web features using PHP, JavaScript, Yii2</li>
+                <li>Improved system responsiveness and user experience</li>
+                <li>Used SQL queries for backend reporting and metrics tracking</li>
+                <li>Resolved legacy issues and maintained system stability</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="section">
+    <div class="container center">
+        <h2>Let's Connect</h2>
+
+        <p>
+            Open to Data Analyst, BI Analyst, Reporting Analyst,
+            and entry-level analytics opportunities.
+        </p>
+
+        <a href="mailto:vidhisolanki189@gmail.com" class="btn primary">
+            <i class="fa fa-envelope"></i> Email Me
+        </a>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="container">
+        <p>&#169; 2026 Vidhi Solanki | Built with GitHub Pages</p>
+    </div>
+</footer>
+
+</body>
+</html>
