@@ -1,0 +1,42 @@
+footer {
+    text-align: center;
+    padding: 2rem;
+    background: var(--card-bg);
+    border-top: 1px solid #e1e4e8;
+}
+
+.content-container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+    padding-top: 1rem;
+}
+
+.content-container h3 {
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+}
+
+.feature-list {
+    margin-left: 1.5rem;
+    margin-top: 0.5rem;
+}
+
+.btn-outline {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background: transparent;
+    color: var(--primary-color);
+    text-decoration: none;
+    border: 2px solid var(--primary-color);
+    border-radius: 6px;
+    margin-top: 1rem;
+    margin-left: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.btn-outline:hover {
+    background: var(--primary-color);
+    color: #fff;
+}
