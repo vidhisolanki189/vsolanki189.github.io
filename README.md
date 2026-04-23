@@ -4,7 +4,7 @@ A modern, premium, and fully responsive personal portfolio website built to show
 
 Designed with a sleek "glassmorphism" aesthetic, dark mode by default, and smooth scroll animations to create an instantly impressive experience for recruiters and visitors.
 
-![Portfolio Preview](https://via.placeholder.com/1000x500.png?text=Portfolio+Preview+Image) <!-- Replace with an actual screenshot of your site -->
+![Portfolio Preview](preview.png) <!-- Replace with an actual screenshot of your site -->
 
 ## 🚀 Features
 
