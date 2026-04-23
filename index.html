@@ -1,99 +1,174 @@
-<head>
-    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vidhi Solanki - Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        :root {
+            --primary-color: #0366d6;
+            --text-color: #24292e;
+            --bg-color: #f6f8fa;
+            --card-bg: #ffffff;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        header {
+            background: var(--card-bg);
+            padding: 1rem 5%;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 100;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+        
+        section {
+            padding: 6rem 5% 4rem;
+            text-align: center;
+        }
+        
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .highlight {
+            color: var(--primary-color);
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 1.5rem;
+            background: var(--primary-color);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 6px;
+            margin-top: 1rem;
+            transition: background 0.3s ease;
+        }
+        
+        .btn:hover {
+            background: #005cc5;
+        }
+        
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .project-card {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 6px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            border: 1px solid #e1e4e8;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background: var(--card-bg);
+            border-top: 1px solid #e1e4e8;
+        }
+        
+        .content-container {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: left;
+            padding-top: 1rem;
+        }
+        
+        .content-container h3 {
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-color);
+        }
+        
+        .feature-list {
+            margin-left: 1.5rem;
+            margin-top: 0.5rem;
+        }
+        
+        .btn-outline {
+            display: inline-block;
+            padding: 0.8rem 1.5rem;
+            background: transparent;
+            color: var(--primary-color);
+            text-decoration: none;
+            border: 2px solid var(--primary-color);
+            border-radius: 6px;
+            margin-top: 1rem;
+            margin-left: 0.5rem;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-outline:hover {
+            background: var(--primary-color);
+            color: #fff;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">Vidhi Solanki</div>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <section id="hero" class="hero">
-        <div class="hero-content">
-            <h1>Hi, I'm <span class="highlight">Vidhi Solanki</span></h1>
-            <p>Data Analyst & Software Developer generating actionable business insights.</p>
-            <a href="#projects" class="btn">View My Work</a>
-        </div>
-    </section>
-
-    <section id="about" class="about">
-        <h2>About Me</h2>
-        <div class="content-container">
-            <p>Data Analyst with a strong foundation in Python, SQL, and data visualization, backed by the IBM Data Analyst Professional Certificate. Experienced in leveraging data to identify trends, generate insights, and support decision-making. Skilled in creating dashboards, automating workflows, and transforming raw datasets into actionable business intelligence. Proven ability to collaborate across teams and apply analytical thinking to enhance system performance and user experience.</p>
-            
-            <h3>Technical Skills</h3>
-            <ul class="feature-list">
-                <li><strong>Programming & Analytics:</strong> Python, SQL, Excel, Pandas, NumPy</li>
-                <li><strong>Visualization:</strong> Plotly, Dash, Cognos Analytics, Matplotlib, Seaborn</li>
-                <li><strong>Web Dev & Databases:</strong> PHP, JavaScript, jQuery, Yii2, MySQL</li>
-                <li><strong>Tools:</strong> Git, GitHub, GitLab, Data Wrangling, EDA</li>
-            </ul>
-        </div>
-    </section>
-
-    <section id="experience" class="about">
-        <h2>Professional Experience</h2>
-        <div class="content-container">
-            <h3>Junior Software Developer</h3>
-            <p><strong>NuWave Communications Inc</strong> | Ahmedabad, India | Feb 2023 – Feb 2025</p>
-            <ul class="feature-list">
-                <li>Developed and optimized web features in PHP, JavaScript, and Yii2, improving system responsiveness and user experience.</li>
-                <li>Collaborated with QA and design teams to ensure high-quality product releases.</li>
-                <li>Assisted in debugging and resolving legacy code issues, maintaining system stability.</li>
-                <li>Leveraged SQL queries for database operations and backend reporting to support application metrics tracking.</li>
-            </ul>
-        </div>
-    </section>
-
-    <section id="projects" class="projects">
-        <h2>Projects</h2>
-        <div class="project-grid">
-            <div class="project-card">
-                <h3>IBM Data Analyst Capstone</h3>
-                <p>Collected, cleaned, and wrangled datasets for actionable insights using Python and SQL. Developed interactive dashboards with Plotly/Dash to visualize KPIs and metrics.</p>
-            </div>
-            <div class="project-card">
-                <h3>Crowdsourcing Short Squeeze Dashboard</h3>
-                <p>Built a Python-driven dashboard to track real-time financial data and visualize trends. Automated data collection from APIs, improving efficiency and accuracy.</p>
-            </div>
-            <div class="project-card">
-                <h3>RFS Hotel Booking System</h3>
-                <p>Implemented features to track bookings and customer activity, providing a foundation for data-driven insights. Integrated MySQL backend for transactional data management.</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="education" class="about">
-        <h2>Education & Certifications</h2>
-        <div class="content-container">
-            <h3>Master of Computer Application</h3>
-            <p>KSV University, Gandhinagar | Apr 2023 | SPI: 8.00</p>
-            <h3>Bachelor of Computer Application</h3>
-            <p>KSV University, Gandhinagar | Apr 2021 | SPI: 7.89</p>
-            <h3>Certifications</h3>
-            <p>IBM Data Analyst Professional Certificate (Python, SQL, Excel, Data Visualization, Dashboards, Generative AI)</p>
-        </div>
-    </section>
-
-    <section id="contact" class="contact">
-        <h2>Contact Me</h2>
-        <p>Interested in working together? Let's connect on LinkedIn or via email.</p>
-        <p style="margin: 1rem 0;">Phone: +91 81285 33670</p>
-        <a href="mailto:vidhisolanki189@gmail.com" class="btn">Email Me</a>
-        <a href="https://linkedin.com/in/vidhisolanki189" class="btn-outline" target="_blank">LinkedIn</a>
-    </section>
-
     <footer>
         <p>&copy; 2024 Vidhi Solanki. Hosted on GitHub Pages.</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        // Add subtle drop shadow to header when scrolling
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            
+            if (window.scrollY > 10) {
+                header.style.boxShadow = '0 4px 10px rgba(0,0,0,0.1)';
+            } else {
+                header.style.boxShadow = '0 1px 3px rgba(0,0,0,0.1)';
+            }
+        });
+    </script>
+</body>
+</html>
