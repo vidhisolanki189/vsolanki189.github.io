@@ -514,30 +514,16 @@ body {
 
 .resume-actions {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
-    gap: 1rem;
+    text-align: center;
+    gap: 1.5rem;
 }
 
 .resume-actions p {
     color: var(--text-muted);
     font-size: 1.1rem;
-}
-
-.resume-viewer {
-    width: 100%;
-    height: 600px;
-    border-radius: 12px;
-    overflow: hidden;
-    border: 1px solid var(--card-border);
-    background: rgba(0, 0, 0, 0.3);
-}
-
-.pdf-frame {
-    width: 100%;
-    height: 100%;
-    border: none;
 }
 
 /* =========================================
