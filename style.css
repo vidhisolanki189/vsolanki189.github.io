@@ -310,8 +310,28 @@ body {
    ========================================= */
 .about-grid {
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 1fr 2.5fr;
     gap: 2rem;
+    align-items: center;
+}
+
+.about-details {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.profile-img {
+    width: 100%;
+    border-radius: 12px;
+    display: block;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.profile-img:hover {
+    transform: scale(1.02);
 }
 
 .about-text h3 {
@@ -327,9 +347,10 @@ body {
 
 .about-stats {
     display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: space-around;
 }
 
 .stat-item {
@@ -572,11 +593,10 @@ footer { padding: 3rem 0; border-top: 1px solid var(--card-border); margin-top: 
 
 @media (max-width: 900px) {
     .about-grid, .contact-wrapper { grid-template-columns: 1fr; }
+    .about-stats { flex-direction: column; }
     .hero-content h1 { font-size: 2.5rem; }
 }
 @media (max-width: 768px) {
-    .resume-viewer { height: 400px; }
-    .resume-actions { flex-direction: column; text-align: center; }
     .nav-links { position: fixed; top: var(--nav-height); right: -100%; width: 100%; height: calc(100vh - var(--nav-height)); background: var(--bg-color); flex-direction: column; align-items: center; justify-content: center; transition: var(--transition); }
     .nav-links.active { right: 0; }
     .mobile-menu-btn { display: block; }
